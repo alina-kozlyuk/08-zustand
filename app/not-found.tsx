@@ -1,4 +1,23 @@
+import { Metadata } from 'next';
 import css from './Home.module.css'
+
+export const metadata: Metadata = {
+  title: "404 - Page not found",
+  description: "The requested NoteHub page does not exist.",
+  openGraph: {
+    title: "404 - Page not found",
+    description: "The requested NoteHub page does not exist.",
+    url: '/not-found',
+    images: [
+      {
+      url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'NoteHub app preview',
+    },
+    ],
+  },
+};
 
 const NotFound = () => {
     return (
