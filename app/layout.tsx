@@ -15,18 +15,19 @@ const roboto = Roboto({
 
 
 export const metadata: Metadata = {
-  title: "NoteHub",
-  description: "App for your notes",
+  title: 'NoteHub',
+  description: 'App for your notes',
   openGraph: {
-    title: "NoteHub",
-    description: "App for your notes",
+    title: 'NoteHub',
+    description: 'App for your notes',
+    url: 'https://08-zustand-zeta-pied.vercel.app',
     images: [
       {
-      url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'NoteHub app preview',
-    },
+        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NoteHub app preview',
+      },
     ],
   },
 };

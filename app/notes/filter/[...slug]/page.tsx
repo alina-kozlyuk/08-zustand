@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: NotesFilterPageProps): Promis
      openGraph: {
     title,
       description,
-    url: `https://notehub.com/notes/filter/${selectedTag}`,
+    url: `https://08-zustand-zeta-pied.vercel.app/notes/filter/${selectedTag}`,
     images: [
       {
       url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
