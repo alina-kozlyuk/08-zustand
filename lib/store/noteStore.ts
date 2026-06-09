@@ -8,10 +8,10 @@ type Draft = {
     tag: NoteTag;
 }
 
-export const initialDraft = {
+export const initialDraft:Draft = {
     title: '',
     content: '',
-    tag: 'Todo' as NoteTag,
+    tag: 'Todo',
 };
 
 type NoteStore = {
@@ -21,7 +21,7 @@ type NoteStore = {
 };
 
 export const useNoteStore = create<NoteStore>()(
-     persist(
+  persist(
     (set) => ({
       draft: initialDraft,
 
@@ -40,6 +40,10 @@ export const useNoteStore = create<NoteStore>()(
     }),
     {
       name: 'note-draft',
+
+      partialize: (state) => ({
+        draft: state.draft,
+      }),
     }
   )
-)
+);

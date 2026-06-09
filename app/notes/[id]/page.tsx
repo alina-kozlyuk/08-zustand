@@ -17,14 +17,14 @@ type NoteDetailsProps = {
 export async function generateMetadata({ params }: NoteDetailsProps): Promise<Metadata> {
   const { id } = await params;
   const note = await fetchNoteById(id);
-    console.log('generateMetadata', id);
+
   return {
     title: note.title,
     description: note.content.slice(0, 30),
      openGraph: {
     title: note.title,
       description: note.content.slice(0, 30),
-    url: `https://notehub-public.goit.study/notes/${id}`,
+    url: `https://notehub.com/notes/${id}`,
     images: [
       {
       url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
@@ -39,7 +39,6 @@ export async function generateMetadata({ params }: NoteDetailsProps): Promise<Me
 
 export default async function NoteDetails({ params }: NoteDetailsProps) {
   const { id } = await params;
- console.log('DETAILS PAGE');
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
